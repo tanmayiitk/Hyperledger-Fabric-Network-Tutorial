@@ -8,7 +8,7 @@ Part-1
 1. Initialize the dev environment
 `dev-init.sh`
 2. Set the context to acme
-`.  set-env.sh   acme`
+`.  set-env.sh  acme`
 
 Part-2
 ------
@@ -43,7 +43,7 @@ Part-1
 Part-2
 ------
 1. Setup the query argument for the chaincode
-`'set-chain-env.sh -q  '{"Args":["query","a"]}'`
+`set-chain-env.sh -q  '{"Args":["query","a"]}'`
 
 2. Execute the query
 `chain.sh query`    _This will get us value of a_
@@ -52,7 +52,7 @@ Part-2
 Part-3
 ------
 1. Setup the invoke argument for the chaincode
-`'set-chain-env.sh -i  '{"Args":["invoke","a","b","5"]}'`
+`set-chain-env.sh -i  '{"Args":["invoke","a","b","5"]}'`
 
 2. Execute the invoke
 `chain.sh invoke`  _ This will transfer 5 from a to b_

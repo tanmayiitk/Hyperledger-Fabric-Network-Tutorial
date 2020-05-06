@@ -1,0 +1,34 @@
+#!/bin/bash
+#
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+FCA=$GOPATH/src/github.com/hyperledger/fabric-ca
+
+echo "Running unit tests ..."
+{
+export PATH=$PATH:$GOPATH/bin
+
+EXCLUDED_PKGS=(
+    "/api$"
+    "/credential$"
+    "/fabric-ca-client$"
+    "/lib/common$"
+    "/test/fabric-ca-load-tester$"
+    "/mocks$"
+    "integration"
+    "/ldap"
+    "/metrics"
+)
+
+PKGS=`go list github.com/hyperledger/fabric-ca/... | grep -v -f <(printf '%s\n' "${EXCLUDED_PKGS[@]}")`
+
+gocov test -timeout 15m $PKGS | gocov-xml > coverage.xml
+} 2>&1 | tee /tmp/test.results
+
+echo "Finished running all tests"
+
+$FCA/scripts/check_test_results /tmp/test.results
+
+exit $?

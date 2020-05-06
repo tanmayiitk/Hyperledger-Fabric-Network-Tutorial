@@ -22,7 +22,7 @@ Log out & Log back in
 Log out & Log back in 
 `./validate-caserver.sh`
 
-5. ##### Install Hyperledger Explorer tool 
+5. ##### Install Hyperledger Explorer tool
 `./install-explorer.sh`
 Log out & Log back in 
 `./validate-explorer.sh`
