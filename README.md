@@ -14,7 +14,7 @@
 4. After successfull execution of command, ssh into VM by `vagrant ssh`
 
 #### Install Network Pre-requisites, Fabric Binaries & Tools
-1. Change directory to `cd network`
+1. Change directory to `cd network/setup`
 2. Execute `chmod u+x *.sh`
 3. Change directory to `cd network/setup` & Follow the instructions in README.md of network/setup directory to install network pre-requisites, fabric binaries & tools.
 
