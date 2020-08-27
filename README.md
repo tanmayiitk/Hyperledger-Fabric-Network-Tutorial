@@ -6,11 +6,11 @@
 - Install [Vagrant](https://www.vagrantup.com/downloads.html)
 - IDE of your choice I recommend [VS Code](https://code.visualstudio.com/download)
 
-## Steps in setting up fabric network
+## Steps for setting up fabric network
 #### Host Machine Terminal commands
 1. Clone the repository
 2. Change directory to `cd Hyperledger-Fabric-Network-Tutorial`
-3. Execute `vagrant up`, the process may take upto 15 minutes(depends on your connection speed)  _Look for the errors while exectution, and resolve virtual box related errors on yourself_
+3. Execute `vagrant up`, the process may take upto 15 minutes(depends on your connection speed)  _Look for the errors while exectution, and resolve virtual box related errors by yourself_
 4. After successfull execution of command, ssh into VM by `vagrant ssh`
 
 #### Install Network Pre-requisites, Fabric Binaries & Tools
